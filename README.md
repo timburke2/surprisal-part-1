@@ -59,10 +59,13 @@ Traditional IR models like **TF-IDF** and **BM25** infer document relevance base
 
 1. **Full Run**
 
+    ```bash
+    python main.py
+    
 2. **Tokenize Documents**:
 
     ```bash
-    python your_script.py --init
+    python main.py --init
     ```
 
     This command tokenizes the documents and generates initial files like `tokenized_answers.json` and `term_index.json`.
@@ -70,13 +73,13 @@ Traditional IR models like **TF-IDF** and **BM25** infer document relevance base
 3. **Generate Queries and Surprisal**:
 
     ```bash
-    python your_script.py --queries
+    python main.py --queries
     ```
 
     This command generates **Sufficient Exact Queries (SEQs)**, computes topic surprisal, and ranks the topics based on their surprisal values.
 
 4. **Evaluate Models**:  
-   You can run the evaluation models (e.g., PyTerrier's TF-IDF, BM25, or vectimsearch) and compare their performance with the surprisal-based ranking. The find_correlation() function expects a qrel file, the result binary in TSV, and the ranked topic queries file.
+   You can run the evaluation models (e.g., PyTerrier's TF-IDF, BM25, or vectimsearch (https://github.com/timburke2/vector-search.git)) and compare their performance with the surprisal-based ranking. The find_correlation() function expects a qrel file, the result binary in TSV, and the ranked topic queries file.
 
 ## Key Files
 
