@@ -15,7 +15,7 @@ By calculating these metrics, the project aims to classify the difficulty of top
 
 ## Motivation
 
-Traditional IR models like **TF-IDF** and **BM25** infer document relevance based on word similarity, which often ignores semantic meaning. This project addresses this limitation by using surprisal as a more fundamental measure of relevance, based on the reduction of uncertainty in a search space. The hypothesis is that **topics with higher surprisal are harder to retrieve**, and this difficulty correlates with lower performance on IR evaluation metrics such as **nDCG**, **MAP**, and **MRR**.
+Traditional IR models like **TF-IDF** and **BM25** infer document relevance based on word similarity, which often ignores semantic meaning. When a ground truth file asserts a set of documents is relevant to a shared topic, it may be the case that there is a high degree of varience between relevant sets in terms of how similar the documents are to eachother. Two topics may differ greatly in how difficult it is to **isolate the exact set of relevant documents**, or at least rank these higher than less relevant results. This project addresses this limitation by using **surprisal as a quantifier** of this prinicple, based on the reduction of uncertainty in a search space. The hypothesis is that **topics with higher surprisal are harder to retrieve** perfect results for, and this difficulty correlates with lower performance on IR evaluation metrics such as **nDCG**, **MAP**, and **MRR**.
 
 ## Project Components
 
